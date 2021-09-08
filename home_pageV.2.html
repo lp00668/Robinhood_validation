@@ -1,0 +1,1922 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+		@import 'https://fonts.googleapis.com/css?family=Kanit|Prompt';
+		@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Robinhood Home page</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+		<script>  
+
+		  const TEMPLATE1 = '${title}';
+		  
+		  window.onload = function(){   
+			(function(){
+			  document.getElementById('file').addEventListener('change', onChange);
+			  function onChange(event) {
+				var reader = new FileReader();
+				reader.onload = onReaderLoad;
+				reader.readAsText(event.target.files[0]);
+			  }
+			  function onReaderLoad(event){
+				//console.log(event.target.result);
+				var obj = JSON.parse(event.target.result);
+				printValue(obj);
+			  }
+			}());
+		  }
+
+		  function printValue(obj){
+			var i = 0;
+			var section;
+			var div;
+			for (var key in obj) {
+			  i++;
+			  section = obj[key]["section"];
+			  div = document.createElement('div');
+			  div.innerHTML = TEMPLATE1.
+				replace("${section_name}", section["name"]).
+				replace("${title}", section["title"]);
+			  document.getElementById("section" + i).appendChild(div);
+			}
+		  }
+		</script>
+		<script>
+			var dict = {};
+					   
+	        dict[type1] = LARGE_CAROUSEL;
+			dict[type2] = BANNER_CAROUSEL;
+			dict[type3] = MEDIUM_CAROUSEL;
+			dict[type4] = GRID_CAROUSEL;
+			dict[type5] = CIRCLE_CAROUSEL;
+		</script>
+		<script src="jquery.mousewheel.js"></script>
+		<link rel="stylesheet" href="splide.min.css">
+	</head>
+	<body>
+		<header>
+			<input id="file" type="file" />
+			<div class="wrapper">
+				<nav id="header-nav" class="navbar navbar-default">
+				<div style="position:relative; top:6px; left:42px">
+				<p> จัดส่งที่</p>
+				</div>
+				<img class="fit" src="images\pin.png" width="35" height="35" align="middle" style="position:relative; left:1px;">
+				<img class="fit" src="images\menu.jpg" width="40" height="40" align="right" style="position:relative; left:-10px;" >
+				<img class="fit" src="images\heart.jpg" width="30" height="30" align="middle" style="position:relative; left:350px;">
+				
+				<div style="position:relative; top:-77px; left:107px">
+				<p2> 91/34 ถนน พระราม ๒</p2>
+				</div>
+				<div class="container" style="height:110px; background-color: #FAFAFA ; position:relative; top:-70px;">
+					<img class="fit" src="images\bg.JPG" width="320" height="89" align="middle"  style="top:21px; left:160px;">
+					<input style="position:absolute; top:15px; left:15px" type="text" class="xoutline" placeholder="อย่านอนถ้ายังหิว สั่ง...">
+					<img class="fit" src="images\search.png" width="20" height="20" style="position:absolute; top:25px; left:225px;">				
+					<div style="position:absolute; top:50px; left:15px">
+						<p>ค้นหาร้านอาหารหรือเมนูที่คุณชอบ</p>
+					</div>
+				</div>
+				<div class="container" style="height:3402px; background-color: #fefff6 ; position:relative; top:-70px;">
+					<div id="div1">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section1" style="position:absolute; top:10px; left:45px;"></div>
+						<div style="position:absolute; top:14px; left:392px">
+							<p4>ดูทั้งหมด</p4>
+						</div>
+						<div class="horizontal-scroll-wrapper squares" style="position:absolute; top:45px; left:-180px">
+							<div>
+								item 1
+							</div>
+							<div class="rsquare">
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:17px; top:-60px;">
+								<div style="position:absolute; top:120px; left:33px">
+								<p3>OOGA BOOGA FARM</p3>
+								</div>
+								<p style="position:absolute; top:133px; left:33px;">ร้านอาหารและสินค้าสุขภาพ ผักผลไม้ออร์แกนิกปลูกดิน...</p>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:35px; top:-60px;">
+								<div style="position:absolute; top:120px; left:53px">
+								<p3>espressobanban</p3>
+								</div>
+								<p style="position:absolute; top:133px; left:53px;">รับผิดชอบในรสชาติ และ ความพอใจ</p>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:50px; top:-60px;">
+								<div style="position:absolute; top:120px; left:68px">
+								<span class="nosplit">ก๋วยเตี๋ยวเรือแม่ละออง</span>
+								</div>
+								<p style="position:absolute; top:133px; left:68px;">เป็นร้านก๋วยเตี๋ยวเรือและ อาหารตามสั่ง</p>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:65px; top:-60px;">
+								<div style="position:absolute; top:120px; left:83px">
+								<p3>สเต็กเด็กแนว </p3>
+								<span class="nosplit" style="position:absolute; top:20px; left:0px">พระราม2-พุทธบูชา</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:83px"> ร้านบรรยากาศดี นั่งสบาย</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:83px"> นั่งชิว มีที่จอดรถและห้อง..</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:80px; top:-60px;">
+								<div style="position:absolute; top:120px; left:98px">
+								<p3>Yasu</p3>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:152px; left:98px">กระยาสารทสูตรดั้งเดิม โดย</span>
+								<span class="nosplit2" style="position:absolute; top:177px; left:98px">ยำสุ หอม กรอบ อร่อยแบบ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:95px; top:-60px;">
+								<div style="position:absolute; top:120px; left:120px">
+								<span class="nosplit" style="position:absolute; top:0px; left:-7px">ตาเย็น บะหมี่ฟลุ๊ค</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:152px; left:113px">บะหมี่ฟลุ๊ค และ ข้าวมันไก่</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:110px; top:-60px;">
+								<div style="position:absolute; top:120px; left:90px">
+								<span class="nosplit" style="position:absolute; top:0px; left:38px">บุนนาคอีสานเวียดนาม</span>
+								<span class="nosplit" style="position:absolute; top:20px; left:38px">(ส้มตำเจ๊สุพรรณ)</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:128px">อาหารอีสานและแหนมเนือง</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:125px; top:-60px;">
+								<div style="position:absolute; top:120px; left:90px">
+								<span class="nosplit" style="position:absolute; top:0px; left:53px">Yui กะทะย่าง</span>				
+								</div>
+								<span class="nosplit2" style="position:absolute; top:150px; left:143px">ข้าวหมูเกาหลี สูตรหมักหมู</span>
+								<span class="nosplit2" style="position:absolute; top:170px; left:143px">เฉพาะร้าน yui...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:140px; top:-60px;">
+								<div style="position:absolute; top:120px; left:146px">
+								<span class="nosplit" style="position:absolute; top:0px; left:13px">Sister's steak</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:150px; left:158px">Steak BBQ&ampGrilled
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:155px; top:-60px;">
+								<div style="position:absolute; top:120px; left:146px">
+								<span class="nosplit" style="position:absolute; top:0px; left:28px">อาหมัด ก๋วยเตี๋ยวปลา</span>
+								<span class="nosplit" style="position:absolute; top:20px; left:28px">สาขา 3</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:170px; top:-60px;">
+								<div style="position:absolute; top:120px; left:146px">
+								<span class="nosplit" style="position:absolute; top:0px; left:43px">อยากขายตามสั่ง</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:185px; top:-60px;">
+								<div style="position:absolute; top:120px; left:146px">
+								<span class="nosplit" style="position:absolute; top:0px; left:58px">ครัวยายแมว</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:150px; left:203px">ร้านอาหารราคาถูก อร่อย</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:200px; top:-60px;">
+								<div style="position:absolute; top:120px; left:146px">
+								<span class="nosplit" style="position:absolute; top:0px; left:73px">เนเน่เฟรนฟรายชีส</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:150px; left:218px">ร้อนกรอบอร่อยค่ะ</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:217px; top:-60px;">
+								<div style="position:absolute; top:120px; left:146px">
+								<span class="nosplit" style="position:absolute; top:0px; left:88px">หวาน้ำสุขภาพ</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:150px; left:233px">น้ำสุขภาพ สด สะอาด ใหม่</span>
+								<span class="nosplit2" style="position:absolute; top:175px; left:233px">ไม่ผสมสารกันบูด ไม่ผสม...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:235px; top:-60px;">
+								<div style="position:absolute; top:120px; left:146px">
+								<span class="nosplit" style="position:absolute; top:0px; left:108px">ไก่ทอด ถึงใจ</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="div2">
+						<div class="container">
+							<div class="view-port">							
+								<div class="images-container">	
+									<div class="card">
+										<a style="text-decoration:none" href="https://www.robinhood.in.th/promotion/thai-select&banner=RBHxThaiSelectBanner"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/RBH_FreedeliveryBanner_20210725.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+									<div class="card">
+										<a style="text-decoration:none" href="https://www.robinhood.in.th/promotion/taste-of-siam&banner=RBHxTastsOfSiamBanner"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/RBH_DessertBanner_20210725.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+									<div class="card">
+										<a style="text-decoration:none" href="https://robinhood.in.th/promotion/homey-never-lonely&banner=RBHxMinorBanner"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/RBHxMinor_NewBanner.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+									<div class="card">
+										<a style="text-decoration:none" href="https://www.robinhood.in.th/food-playlist/รวมร้านฮิตแบรนด์ดัง&banner=CRGBanner"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/RBHxCRGBanner_20210607.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+									<div class="card">
+										<a style="text-decoration:none" href="https://www.robinhood.in.th/food-playlist/รวมทุกความอร่อยจากห้าง&banner=GourmetBanner"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/RBHxGourmetBanner.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+									<div class="card">
+										<a style="text-decoration:none" href="https://www.robinhood.in.th/freshmarket&banner=FreshmarketPlaylist"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/RBHxDITBanner20210715.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+									<div class="card">
+										<a style="text-decoration:none" href="https://www.robinhood.in.th/food-playlist/รวมเตี๋ยวร้านเด็ด&banner=NoodleCTAPlaylist&utm_source=Playlistbanner&utm_medium=organic&utm_campaign=engagement&utm_content=noodleCTAPlaylist"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/NoodlectaBanner.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+									<div class="card">
+										<a style="text-decoration:none" href="https://www.robinhood.in.th/food-playlist/สตรีทฟูดดี้&banner=StreetfoodPlaylist&utm_source=Playlistbanner&utm_medium=organic&utm_campaign=engagement&utm_content=streetfoodplaylist"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/streetfood.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+									<div class="card">
+										<a style="text-decoration:none" href="https://www.robinhood.in.th/food-playlist/มหกรรมชานมไข่มุก&banner=Milkteafestival&utm_source=Playlistbanner&utm_medium=organic&utm_campaign=engagement&utm_content=bobateaplaylist"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/milkteaFestival.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+								</div>
+								<button id="prev">&lt </button>
+								<button id="next">&gt </button>
+								<div style="position:relative; left:135px; top:5px;">
+									<span class="dot"></span>
+									<span class="dot"></span>
+									<span class="dot"></span>
+									<span class="dot"></span>
+									<span class="dot"></span>
+									<span class="dot"></span>
+									<span class="dot"></span>
+									<span class="dot"></span>
+									<span class="dot"></span>
+								</div>
+							</div>
+						</div>					
+						<script>
+							const next = document.getElementById('next');
+							const prev = document.getElementById('prev');
+							const images = document.querySelector('.images-container');
+							const dots = document.querySelectorAll('.dot');
+							
+							const first_card_clone = images.children[0].cloneNode(true);
+							const last_card_clone = images.children[images.children.length-1].cloneNode(true);
+							
+							images.insertBefore(last_card_clone, images.children[0]);
+							images.appendChild(first_card_clone);
+							
+							images.style.transitionDuration = "0.0s";
+							images.style.transform = `translate(-412px)`;
+							
+							let dotStore = document.querySelectorAll('.dot');
+							
+							let current_card = 1;
+							
+							let current_dot = 1;
+								
+							let inAnim = false;
+							
+							highlightDot(dotStore[0]);
+							
+							dotStore.forEach(dot => {
+								dot.addEventListener("click", event => {
+									if(!inAnim) {
+										let dotStoreArray = Array.prototype.slice.call(dotStore);
+										let dotIndex = dotStoreArray.indexOf(event.target);
+										
+										highlightDot(event.target);
+									}
+								})
+							})
+							
+							function highlightDot(dotSelect, direction) {
+								if(dotSelect === undefined && direction === "next"){
+									dotSelect = dotStore[0]
+								}else if(dotSelect === undefined && direction === "prev"){
+									dotSelect = dotStore[images - 1]
+								}
+									
+									dotStore.forEach(dot => {
+									if(dot === dotSelect) {
+										dot.classList.add("dot-fill");
+									}else{
+										dot.classList.remove("dot-fill");
+									}
+								})
+							}
+								
+							next.addEventListener('click', () => {
+								if (current_card < images.children.length - 1) {
+									current_card++;
+								
+									images.style.transitionDuration = "0.5s";
+									images.style.transform = `translate(-${(current_card * 392) + (current_card * 20)}px)`;
+									
+									if (current_card === images.children.length - 1) {
+										setTimeout(() => {
+										images.style.transitionDuration = "0.0s";
+										images.style.transform = `translate(-412px)`;
+										current_card = 1;
+										}, 600);
+									}
+								}else{
+									return;
+								}
+							});
+							
+							prev.addEventListener('click', () => {
+								if (current_card > 0) {
+									current_card--;
+									
+									images.style.transitionDuration = "0.5s";
+									images.style.transform = `translate(-${(current_card * 392) + (current_card * 20)}px)`;
+										
+									if (current_card === 0) {
+										setTimeout(() => {
+										images.style.transitionDuration = "0.0s";
+										images.style.transform = `translate(-${(images.children.length -2) * 412}px)`;
+										current_card = images.children.length - 2;
+										}, 600);
+									}
+								}else{
+									return;
+								}
+							});												
+						</script>
+					</div>
+					<div id="div3" style="position:relative; top:458px">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section2" style="position:absolute; top:10px; left:45px;"></div>
+						<div id="section3" style="position:absolute; top:10px; left:45px;"></div>
+						<div style="position:absolute; top:14px; left:392px">
+						<p4>ดูทั้งหมด</p4>
+						</div>
+						<div class="horizontal-scroll-wrapper squares" style="position:absolute; top:45px; left:-180px">
+							<div>item 1</div>
+							<div class="rsquare">
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:17px; top:-60px;">
+								<div style="position:absolute; top:120px; left:33px">
+								<p3>Basil Thai Kitchen</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:35px; top:-60px;">
+								<div style="position:absolute; top:120px; left:55px">
+								<span class="nosplit" style="position:absolute; top:0px; left:-2px">The Pizza Company</span>
+								<span class="nosplit" style="position:absolute; top:20px; left:-2px">เดอะ พิซซ่า คอมปะนี...</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:50px; top:-60px;">
+								<div style="position:absolute; top:120px; left:68px">
+									<span class="nosplit">THE COFFEE CLUB</span>
+								</div>
+								<div style="position:absolute; top:140px; left:68px">
+									<span class="nosplit">Chatrium Sathon</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:65px; top:-60px;">
+								<div style="position:absolute; top:120px; left:90px">
+									<span class="nosplit" style="position:absolute; top:0px; left:-7px">Bonchon Prannok</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:80px; top:-60px;">
+								<div style="position:absolute; top:120px; left:98px">
+									<span class="nosplit">Dairy Queen BIG C</span>
+								</div>
+								<div style="position:absolute; top:140px; left:98px">
+									<span class="nosplit">BANGBON</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:95px; top:-60px;">
+								<div style="position:absolute; top:120px; left:113px">
+									<span class="nosplit">Bonchon Sathu</span>
+								</div>
+								<div style="position:absolute; top:140px; left:113px">
+									<span class="nosplit">Pradit</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:110px; top:-60px;">
+								<div style="position:absolute; top:120px; left:128px">
+									<span class="nosplit">THE COFFEE CLUB</span>
+								</div>
+								<div style="position:absolute; top:140px; left:128px">
+									<span class="nosplit">Wireless Rd.</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:125px; top:-60px;">
+								<div style="position:absolute; top:120px; left:143px">
+									<span class="nosplit">Bonchon Lasan</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:140px; top:-60px;">
+								<div style="position:absolute; top:120px; left:158px">
+									<span class="nosplit">Swensen's บิ๊กซีรัชดา</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:155px; top:-60px;">
+								<div style="position:absolute; top:120px; left:173px">
+									<span class="nosplit">Dairy Queen JAS</span>
+								</div>
+								<div style="position:absolute; top:140px; left:173px">
+									<span class="nosplit">SRINAKARIN</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:170px; top:-60px;">
+								<div style="position:absolute; top:120px; left:188px">
+									<span class="nosplit">BreadTalk Central</span>
+								</div>
+								<div style="position:absolute; top:140px; left:188px">
+									<span class="nosplit">Bangna</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:185px; top:-60px;">
+								<div style="position:absolute; top:120px; left:203px">
+									<span class="nosplit">BreadTalk Central</span>
+								</div>
+								<div style="position:absolute; top:140px; left:203px">
+									<span class="nosplit">West Gate</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:200px; top:-60px;">
+								<div style="position:absolute; top:120px; left:218px">
+									<span class="nosplit">Coffee Journey</span>
+								</div>
+								<div style="position:absolute; top:140px; left:218px">
+									<span class="nosplit">พระราม 9</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:217px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:148px">Burger King (เบอร์</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:148px">เกอร์ คิง) - ปั้มเชลล์...</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:233px">เบอร์เกอร์คิงส์ ย่างด้วยไฟ</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:233px">ได้รสชาติ</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:235px; top:-60px;">
+								<div style="position:absolute; top:120px; left:146px">
+								<span class="nosplit" style="position:absolute; top:0px; left:103px">Swensen's บางใหญ่</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:253px; top:-60px;">
+								<div style="position:absolute; top:120px; left:268px">
+									<span class="nosplit">Sizzler (ซิซซ์เล่อร์) -</span>
+								</div>
+								<div style="position:absolute; top:140px; left:268px">
+									<span class="nosplit">คิทเช่น เทพารักษ์</span>
+								</div>
+							</div>	
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:270px; top:-60px;">
+								<div style="position:absolute; top:120px; left:285px">
+									<span class="nosplit">Coffee Journey</span>
+								</div>
+								<div style="position:absolute; top:140px; left:285px">
+									<span class="nosplit">เสนานิคม</span>
+								</div>
+							</div>	
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:288px; top:-60px;">
+								<div style="position:absolute; top:120px; left:303px">
+									<span class="nosplit">THE COFFEE CLUB</span>
+								</div>
+								<div style="position:absolute; top:140px; left:303px">
+									<span class="nosplit">Holiday Inn Express...</span>
+								</div>						
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:306px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:238px">Bonchon Bang Bon 5</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:145px; left:323px">ตรงข้ามสน.หนองแขม</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:324px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:253px">Bonchon Mengjai</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="div4" style="position:relative; top:746px">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section4" style="position:absolute; top:10px; left:45px;"></div>
+						<div style="position:absolute; top:14px; left:392px">
+						<p4>ดูทั้งหมด</p4>
+						</div>
+						<div class="horizontal-scroll-wrapper squares" style="position:absolute; top:45px; left:-180px">
+							<div>item 1</div>
+							<div class="rsquare">
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:17px; top:-60px;">
+								<div style="position:absolute; top:120px; left:55px">
+								<span class="nosplit" style="position:absolute; top:0px; left:-20px">Katsuya ปตท.เอกชัย-</span>
+								<span class="nosplit" style="position:absolute; top:20px; left:-20px">บางบอน</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:35px; top:-60px;">
+								<div style="position:absolute; top:120px; left:55px">
+								<span class="nosplit" style="position:absolute; top:0px; left:-2px">Mister Donut</span>
+								<span class="nosplit" style="position:absolute; top:20px; left:-2px">รพ.ตำรวจ</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:50px; top:-60px;">
+								<div style="position:absolute; top:120px; left:68px">
+									<span class="nosplit">Mister Donut</span>
+								</div>
+								<div style="position:absolute; top:140px; left:68px">
+									<span class="nosplit">ปตท.ตลิ่งชัน</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:65px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:0px">Ootoya Central</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:0px">Pinklao</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:85px">โอโตยะ เป็นร้านอาหารญี่ปุ่</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:85px">นพรีเมี่ยม สไตล์ โฉมเมด เ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:80px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:15px">Ootoya Terminal 21</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:150px; left:100px">โอโตยะ เป็นร้านอาหารญี่ปุ่</span>
+								<span class="nosplit2" style="position:absolute; top:175px; left:100px">นพรีเมี่ยม สไตล์ โฉมเมด เ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:95px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:30px">Auntie Anne's Hua</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:30px">Chiew Hospital</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:115px">เพรทเชล และเครื่องดื่ม</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:115px">แบรนด์นำเข้าจากประเทศอ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:110px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:45px">Ootoya 101 The</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:45px">Third Place</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:130px">โอโตยะ เป็นร้านอาหารญี่ปุ่</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:130px">นพรีเมี่ยม สไตล์ โฉมเมด เ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:125px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:60px">Mister Donut เซ็นทารา</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:60px">แกรนด์แอทเซ็นทรัลพล...</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:145px">อยู่ในศูนย์อาหาร ติดกับร้าน</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:145px">ขายเครื่องดื่มตู้เป๊ปซี่</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:140px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:75px">Auntie Anne's Princ</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:75px">Suvarnabhumi Hos...</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:160px">เพรทเชล และเครื่องดื่ม</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:160px">แบรนด์นำเข้าจากประเทศอ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:155px; top:-60px;">
+								<div style="position:absolute; top:120px; left:173px">
+									<span class="nosplit">Yoshinoya (โยชิโนยะ)</span>
+								</div>
+								<div style="position:absolute; top:140px; left:173px">
+									<span class="nosplit">สาขา T10 ติวานนท์</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:170px; top:-60px;">
+								<div style="position:absolute; top:120px; left:188px">
+									<span class="nosplit">Mister Donut</span>
+								</div>
+								<div style="position:absolute; top:140px; left:188px">
+									<span class="nosplit">ปตท.เกษตรนวมินทร์</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:185px; top:-60px;">
+								<div style="position:absolute; top:120px; left:203px">
+									<span class="nosplit">Katsuya คัตสึยะ(ไฮบริด</span>
+								</div>
+								<div style="position:absolute; top:140px; left:203px">
+									<span class="nosplit">คลาวด์) สาขาปตท.พั...</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:200px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:130px">Auntie Anne's Caltex</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:130px">Ngamwongwan</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:215px">เพรทเชล และเครื่องดื่ม</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:215px">แบรนด์นำเข้าจากประเทศอ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:217px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:150px">Auntie Anne's</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:150px">Mahachai 1 Hospital</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:235px">เพรทเชล และเครื่องดื่ม</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:235px">แบรนด์นำเข้าจากประเทศอ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:235px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:167px">Ootoya Central</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:167px">westgate</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:252px">โอโตยะ เป็นร้านอาหารญี่ปุ่</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:252px">นพรีเมี่ยม สไตล์ โฉมเมด เ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:253px; top:-60px;">
+								<div style="position:absolute; top:120px; left:268px">
+									<span class="nosplit">Mister Donut ปั้มน้ำมัน</span>
+								</div>
+								<div style="position:absolute; top:140px; left:268px">
+									<span class="nosplit">บางจาก</span>
+								</div>
+							</div>	
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:270px; top:-60px;">
+								<div style="position:absolute; top:120px; left:285px">
+									<span class="nosplit">Sizzler (ซิซซ์เล่อร์) -</span>
+								</div>
+								<div style="position:absolute; top:140px; left:285px">
+									<span class="nosplit">คิชเช่น ประชาอุทิศ 90</span>
+								</div>
+							</div>	
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:288px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:220px">Ootoya The Mall</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:220px">Bangkhae</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:307px">โอโตยะ เป็นร้านอาหารญี่ปุ่</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:307px">นพรีเมี่ยม สไตล์ โฉมเมด เ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:306px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:235px">Ootoya La Villa</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:150px; left:322px">โอโตยะ เป็นร้านอาหารญี่ปุ่</span>
+								<span class="nosplit2" style="position:absolute; top:175px; left:322px">นพรีเมี่ยม สไตล์ โฉมเมด เ...</span>
+							</div>
+							<div>
+								<img class="fit" src="C:\Users\bonkl\OneDrive\Desktop\SCB10X\robinhood_home\images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:324px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:255px">Katsuya คัตสึยะ จามจุรี</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:255px">สแควร์</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="div5" style="position:relative; top:1033px">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section5" style="position:absolute; top:10px; left:45px;"></div>
+						<div style="position:absolute; top:14px; left:392px">
+						<p4>ดูทั้งหมด</p4>
+						</div>
+						<div class="horizontal-scroll-wrapper squares" style="position:absolute; top:45px; left:-180px">
+							<div>item 1</div>
+							<div class="rsquare">
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:17px; top:-60px;">
+								<div style="position:absolute; top:120px; left:55px">
+								<span class="nosplit" style="position:absolute; top:0px; left:-20px">คุณอ้น สุกี้ โบราณ</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:35px; top:-60px;">
+								<div style="position:absolute; top:120px; left:55px">
+								<span class="nosplit" style="position:absolute; top:0px; left:-2px">นายเอกก๋วยเตี๋ยวเรือ</span>
+								<span class="nosplit" style="position:absolute; top:20px; left:-2px">บางกระแส</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:50px; top:-60px;">
+								<div style="position:absolute; top:120px; left:68px">
+									<span class="nosplit">ครัวลุงตึ๋ง(อาหารตามสั่ง</span>
+								</div>
+								<div style="position:absolute; top:140px; left:68px">
+									<span class="nosplit">อิสลาม) by ซอลีฮ๊ะห์</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:68px">ชุมชนบางอุทิศ ซอย8</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:65px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:0px">สรินทร์ทิพย์ ขนมเบื้อง</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:0px">ไทยตลาดพลู สาขา ต...</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:85px">ขนมเบื้องไทยโบราณไม่มี</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:85px">ครีม</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:80px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:15px">ป้าเพ็ญ อาหารตามสั่ง</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:150px; left:100px">, ถูก อร่อย เยอะ ประหยัด</span>
+								<span class="nosplit2" style="position:absolute; top:175px; left:100px">สอาดถูกหลักอนามัย</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:95px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:30px">ยูซุฟฟู้ด (Yusuffood)</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:30px">ออนนุช ฮาลาล</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:115px">อาหารจานเดียว มุสลิม ฮา</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:115px">ลาล ข้าวมันไก่ ข้าวหมกไก่...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:110px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:45px">ข้าวคลุกกะปิ เมืองนนท์</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:125px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:60px">โจ๊กสามย่าน</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:60px">แฮปปี้แลนด์</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:140px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:75px">เคี่ยว ก๋วยเตี๋ยวหมูต้มยำ</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:75px">สูตรมะนาวแท้</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:160px">ก๋วยเตี๋ยวหมูสับรสแซ่บ</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:160px">เปรี้ยวจี้ดจากมะนาวแท้ๆ เ...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:155px; top:-60px;">
+								<div style="position:absolute; top:120px; left:173px">
+									<span class="nosplit">โคตรผัดกระเพรา</span>
+								</div>
+								<div style="position:absolute; top:140px; left:173px">
+									<span class="nosplit">ถาด&จอมพลังต้มยำมะ...</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:170px; top:-60px;">
+								<div style="position:absolute; top:120px; left:188px">
+									<span class="nosplit">อั๋นโภชนา</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:185px; top:-60px;">
+								<div style="position:absolute; top:120px; left:203px">
+									<span class="nosplit">ครัวเทคโน Krua</span>
+								</div>
+								<div style="position:absolute; top:140px; left:203px">
+									<span class="nosplit">Techno</span>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:200px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:130px">Double M roasted</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:130px">coffee cafe</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:215px">ร้านกาแฟสด จากเมล็ด</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:215px">กาแฟคั่วเอง</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:217px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:150px">ก๋วยเตี๋ยวเป็ดเจ๊โจ๋และ</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:150px">กุยช่ายตลาดพลู-พระร...</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:235px">ก๋วยเตี๋ยวเป็ดพะโล้ย่าน</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:235px">พระราม 3...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:235px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:167px">Curry Qoon ข้าวหน้า</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:167px">แกงกะหรี่</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:252px">ข้าวแกงกะหรี่ (Curry with</span>
+								<span class="nosplit2" style="position:absolute; top:195px; left:252px">Rice)...</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:253px; top:-60px;">
+								<div style="position:absolute; top:120px; left:268px">
+									<span class="nosplit">โจ็กสามย่าน สาขาสวน</span>
+								</div>
+								<div style="position:absolute; top:140px; left:268px">
+									<span class="nosplit">ผัก</span>
+								</div>
+							</div>	
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:270px; top:-60px;">
+								<div style="position:absolute; top:120px; left:285px">
+									<span class="nosplit">จำปีก๋วยจั๊บญวน</span>
+								</div>
+							</div>	
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:288px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:220px">ญีญวนครัวเวียดนาม</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:220px">สาขาบางบัวทอง</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:170px; left:307px">ร้านอาหารเวียดนาม</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:306px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:235px">โตเกียวโบราณ</span>
+								</div>
+								<span class="nosplit2" style="position:absolute; top:150px; left:322px">โตเกียวโบราณแป้งหนานุ่มมี</span>
+								<span class="nosplit2" style="position:absolute; top:175px; left:322px">ให้เลือกหลากหลาย</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo1.png" width="260" height="330" align="middle" style="position:relative; left:324px; top:-60px;">
+								<div style="position:absolute; top:120px; left:85px">
+									<span class="nosplit" style="position:absolute; top:0px; left:255px">ข้าวหมูทอดกู๋หว่าไจ๋</span>
+									<span class="nosplit" style="position:absolute; top:20px; left:255px">สาขา 1 - ซอยเพชรเก...</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="div6" style="position:relative; top:1323px">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section6" style="position:absolute; top:10px; left:45px;"></div>
+						<div style="position:absolute; top:14px; left:392px">
+						<p4>ดูทั้งหมด</p4>
+						</div>
+						<div class="horizontal-scroll-wrapper-2 squares" style="position:absolute; top:40px; left:-120px">
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:-10px; top:-50px;">
+								<div style="position:absolute; top:90px; left:3px">
+								<p3>ครัวลมดี ศรีชู</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:0px; top:-50px;">
+								<div style="position:absolute; top:90px; left:13px">
+								<p3>Unique</p3>
+								</div>
+								<div style="position:absolute; top:110px; left:13px">
+								<p3>Delicious hom...</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:10px;top:-50px;">
+								<div style="position:absolute; top:90px; left:23px">
+								<p3>เหนียวไก่พุงกาง</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:20px; top:-50px;">
+								<div style="position:absolute; top:90px; left:33px">
+								<p3>โกวปี รักกาแฟสด</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:30px; top:-50px;">
+								<div style="position:absolute; top:90px; left:43px">
+								<p3>ร้านชิมิซึ</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:40px; top:-50px;">
+								<div style="position:absolute; top:90px; left:53px">
+								<p3>Coqoon Space</p3>
+								</div>
+								<div style="position:absolute; top:110px; left:53px">
+								<p3>& Cafe</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:50px; top:-50px;">
+								<div style="position:absolute; top:90px; left:63px">
+								<p3>cafe168</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:60px; top:-50px;">
+								<div style="position:absolute; top:90px; left:73px">
+								<p3>Tann's cafe</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:70px; top:-50px;">
+								<div style="position:absolute; top:90px; left:83px">
+								<p3>อาหารตามสั่ง</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:80px; top:-50px;">
+								<div style="position:absolute; top:90px; left:93px">
+								<p3>Niwo Coffee & </p3>
+								</div>
+								<div style="position:absolute; top:110px; left:93px">
+								<p3>Croissant</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:90px; top:-50px;">
+								<div style="position:absolute; top:90px; left:103px">
+								<p3>ไอติม มะลิวัน</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:100px; top:-50px;">
+								<div style="position:absolute; top:90px; left:113px">
+								<p3>D&D </p3>
+								</div>
+								<div style="position:absolute; top:90px; left:163px">
+								<p3>AnanFood</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:110px; top:-50px;">
+								<div style="position:absolute; top:90px; left:123px">
+								<p3>Niwo</p3>
+								</div>
+								<div style="position:absolute; top:90px; left:180px">
+								<p3>Croissant</p3>
+								</div>
+								<div style="position:absolute; top:110px; left:123px">
+								<p3>พระโขนง</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:120px; top:-50px;">
+								<div style="position:absolute; top:90px; left:133px">
+								<p3>ร้านเนื้อย่าง</p3>
+								</div>
+								<div style="position:absolute; top:90px; left:242px">
+								<p3>ลูก</p3>
+								</div>
+								<div style="position:absolute; top:110px; left:133px">
+								<p3>ชิ้นปิ้ง</p3>
+								</div>
+								<div style="position:absolute; top:110px; left:193px">
+								<p3>สาขา</p3>
+								</div>
+								<div style="position:absolute; top:110px; left:239px">
+								<p3>สุขุม...</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:130px; top:-50px;">
+								<div style="position:absolute; top:90px; left:143px">
+								<p3>ข้าวต้มจัด</p3>
+								</div>
+								<div style="position:absolute; top:90px; left:230px">
+								<p3>เต็ม</p3>
+								</div>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:140px; top:-50px;">
+								<div style="position:absolute; top:90px; left:153px">
+								<p3>meetbeef</p3>
+								</div>
+								<div style="position:absolute; top:90px; left:258px">
+								<p3>นัด</p3>
+								</div>
+								<div style="position:absolute; top:110px; left:153px">
+								<p3>เจอเนื้อ</p3>
+								</div>							
+							</div>	
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:150px; top:-50px;">
+								<div style="position:absolute; top:90px; left:163px">
+								<p3>เตาคุณ</p3>
+								</div>
+								<div style="position:absolute; top:90px; left:228px">
+								<p3>ยาย</p3>
+								</div>
+							</div>	
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:160px; top:-50px;">
+								<div style="position:absolute; top:90px; left:173px">
+								<p3>Freperio</p3>
+								</div>
+								<div style="position:absolute; top:90px; left:265px">
+								<p3>ข้าว</p3>
+								</div>
+								<div style="position:absolute; top:90px; left:298px">
+								<p3>ไข่</p3>
+								</div>
+								<span class="nosplit" style="position:absolute; top:110px; left:173px">
+								<p3>ข้นและเฟรนซ์โท...</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:170px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:183px">
+								<p3>กาแฟพันไร่ สาขา</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:183px">
+								<p3>ลาดปลาเค้า41</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:180px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:193px">
+								<p3>ปัณ เบอร์เกอร์</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:193px">
+								<p3>และอาหารยุโรป</p3>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div id="div7" style="position:relative; top:1553px">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section7" style="position:absolute; top:10px; left:45px;"></div>
+						<div style="position:absolute; top:14px; left:392px">
+						<p4>ดูทั้งหมด</p4>
+						</div>
+						<div class="horizontal-scroll-wrapper-2 squares" style="position:absolute; top:40px; left:-120px">
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:-10px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:3px">
+									<p3>น้ำสมุนไพรบ้าน</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:3px">
+									<p3>บ้าน - ฟ้าทะลาย</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:0px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:13px">
+									<p3>Shogun Shogun</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:13px">
+									<p3>โชกุน โชกุน</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:10px;top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:23px">
+									<p3>HOM cold-brew</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:23px">
+									<p3>coffee</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:20px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:33px">
+									<p3>ครัวลมดี ศรีชู</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:30px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:43px">
+									<p3>39 Thirty nine</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:43px">
+									<p3>coffee</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:40px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:53px">
+									<p3>Mister Donut</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:53px">
+									<p3>บิ๊กซี พระราม 2</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:50px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:63px">
+									<p3>toSiam</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:60px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:73px">
+									<p3>โจ๊กบางกอกท่า</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:73px">
+									<p3>ข้ามซอย-7</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:70px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:83px">
+									<p3>Third Place</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:83px">
+									<p3>Cafe</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:80px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:93px">
+									<p3>Arigato - บิ๊กซี</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:93px">
+									<p3>พระราม 2</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:90px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:103px">
+									<p3>ครัวลงพุง</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:100px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:113px">
+									<p3>At Bangmod</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:113px">
+									<p3>Cafe By Pui</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:110px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:123px">
+									<p3>หนูนาซีฟู๊ด กุ้งเผา</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:123px">
+									<p3>อาหารตามสั่ง</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:120px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:133px">
+									<p3>Finnkoff</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:133px">
+									<p3>Slowbar</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:130px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:143px">
+									<p3>กาแฟกะกระชาย</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:140px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:153px">
+									<p3>BROO COFFEE</p3>
+								</span>						
+							</div>	
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:150px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:163px">
+									<p3>ครัวคุณยาย(ด้าน</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:163px">
+									<p3>หลังร้านนวดมา...</p3>
+								</span>
+							</div>	
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:160px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:173px">
+									<p3>ก๋วยเตี๋ยวไก่ตุ๋น</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:173px">
+									<p3>มายด์ มายด์ (...</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:170px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:183px">
+									<p3>FARM LUCK</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:183px">
+									<p3>(ตรงข้ามพุทธบู...</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:180px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:193px">
+									<p3>OHO kitchen</p3>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div id="div8" style="position:relative; top:1785px">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section8" style="position:absolute; top:10px; left:45px;"></div>
+						<div style="position:absolute; top:14px; left:392px">
+						<p4>ดูทั้งหมด</p4>
+						</div>
+						<div class="horizontal-scroll-wrapper-2 squares" style="position:absolute; top:40px; left:-120px">
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:-10px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:3px">
+									<p3>บีเนเจอร์</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:0px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:13px">
+									<p3>ข้าวแกงเฮียอ้วน</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:10px;top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:23px">
+									<p3>Baan Dinso</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:20px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:33px">
+									<p3>กินอร่อย</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:30px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:43px">
+									<p3>บ้านอิงดาว</p3>
+								</span>								
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:40px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:53px">
+									<p3>Vanie Premium</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:53px">
+									<p3>Snacks</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:50px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:63px">
+									<p3>ครัวชมพูอาหาร</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:63px">
+									<p3>ตามสั่ง</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:60px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:73px">
+									<p3>Coffee Way</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:70px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:83px">
+									<p3>Doo nam 1608</p3>
+								</span>								
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:80px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:93px">
+									<p3>เต้าฮวยมะพร้าว</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:93px">
+									<p3>น้ำหอม</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:90px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:103px">
+									<p3>WAKABA</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:100px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:113px">
+									<p3>"ตุ๊.ต๊ะ" TU.TA</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:110px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:123px">
+									<p3>อิ่มกับหมี</p3>
+								</span>								
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:120px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:133px">
+									<p3>ครัวบ้านครู</p3>
+								</span>								
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:130px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:143px">
+									<p3>ชื่นใจหมี</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:140px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:153px">
+									<p3>East Me</p3>
+								</span>						
+							</div>	
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:150px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:163px">
+									<p3>YUMJEED BY</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:163px">
+									<p3>K.JOY</p3>
+								</span>
+							</div>	
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:160px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:173px">
+									<p3>พี่จ๋านมซิ่ง</p3>
+								</span>								
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:170px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:183px">
+									<p3>Naan</p3>
+								</span>								
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:180px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:193px">
+									<p3>The LOBBY</p3>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div id="div9" style="position:relative; top:2016px">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section9" style="position:absolute; top:10px; left:45px;"></div>
+						<div style="position:absolute; top:14px; left:392px">
+						<p4>ดูทั้งหมด</p4>
+						</div>
+						<div class="horizontal-scroll-wrapper-2 squares" style="position:absolute; top:40px; left:-120px">
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:-10px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:3px">
+									<p3>espressobanba</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:3px">
+									<p3>n</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:0px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:13px">
+									<p3>KLIN ปังปิ้ง</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:10px;top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:23px">
+									<p3>BROO COFFEE</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:20px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:33px">
+									<p3>Rice&More </p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:30px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:43px">
+									<p3>The ping coffee</p3>
+								</span>								
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:40px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:53px">
+									<p3>Sammatta</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:53px">
+									<p3>Pinnacle</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:50px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:63px">
+									<p3>หมูขอร้อง</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:60px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:73px">
+									<p3>อยากขายตามน้ำ</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:70px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:83px">
+									<p3>Secret Coffee</p3>
+								</span>								
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:80px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:93px">
+									<p3>OOGA BOOGA</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:93px">
+									<p3>FARM</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:90px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:103px">
+									<p3>กอด กาแฟอินดี้</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:100px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:113px">
+									<p3>ก๋วยเตี๋ยวเตาถ่าน</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:113px">
+									<p3>ออนเซ็น พระรา...</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:110px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:123px">
+									<p3>Fast Track</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:123px">
+									<p3>Coffee</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:120px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:133px">
+									<p3>ครัวสองพี่น้อง</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:133px">
+									<p3>อาหารตามสั่ง (เ...</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:130px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:143px">
+									<p3>น้องนะโมผัดไทย</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:143px">
+									<p3>โบราณพร้อมอา...</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:140px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:153px">
+									<p3>Afternoon bake</p3>
+								</span>						
+							</div>	
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:150px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:163px">
+									<p3>เจ๊เอ็ง ก๋วยจั๊บน้ำ</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:163px">
+									<p3>ข้น</p3>
+								</span>
+							</div>	
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:160px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:173px">
+									<p3>COFFEEATHOM</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:173px">
+									<p3>E</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:170px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:183px">
+									<p3>Magnolia</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:183px">
+									<p3>Icecream อนา...</p3>
+								</span>
+							</div>
+							<div>
+								<img class="fit" src="images\logo2.png" width="180" height="250" align="middle" style="position:relative; left:180px; top:-50px;">
+								<span class="nosplit" style="position:absolute; top:90px; left:193px">
+									<p3>ซาลาเปาเจ คุกกี้</p3>
+								</span>
+								<span class="nosplit" style="position:absolute; top:110px; left:193px">
+									<p3>เพียว โฮมเมด</p3>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div id="div10" style="position:relative; top:2246px">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section10" style="position:absolute; top:10px; left:45px;"></div>
+						<div>
+							<img class="wdn-stretch rounded-corners-2" src="https://static.robinhood.in.th/static/content/images/foodcategory/37_Healthy.png" width="219" height="85" align="middle" style="position:relative; left:15px; top:30px;">
+							<div style="position:absolute; left:148px; top:83px;">
+								<p6>สุขภาพ</p6>
+							</div>
+						</div>
+						<div>
+							<img class="wdn-stretch rounded-corners-2" src="https://static.robinhood.in.th/static/content/images/foodcategory/1_Noodle.png" width="219" height="85" align="middle" style="position:relative; left:247px; top:-55px;">
+							<div style="position:absolute; left:363px; top:83px;">
+								<p6>ก๋วยเตี๋ยว</p6>
+							</div>
+						</div>
+						<div>
+							<img class="wdn-stretch rounded-corners-2" src="https://static.robinhood.in.th/static/content/images/foodcategory/5_Sushi.png" width="219" height="85" align="middle" style="position:relative; left:15px; top:-43px;">
+							<div style="position:absolute; left:187px; top:180px;">
+								<p6>ซูชิ</p6>
+							</div>
+						</div>
+						<div>
+							<img class="wdn-stretch rounded-corners-2" src="https://static.robinhood.in.th/static/content/images/foodcategory/32_Esan.png" width="219" height="85" align="middle" style="position:relative; left:247px; top:-128px;">
+							<div style="position:absolute; left:397px; top:180px;">
+								<p6>อีสาน</p6>
+							</div>
+						</div>
+					</div>
+					<div id="div11" style="position:relative; top:2140px">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section11" style="position:absolute; top:10px; left:45px;"></div>
+						<div class="horizontal-scroll-wrapper-3 squares" style="position:absolute; top:40px; left:-100px">							
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/35.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:48px;">
+									<p7>ยำ</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/20_GrilledChicken.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px; ">
+								<span class="nosplit" style="position:absolute; top:-40px; left:23px;">
+									<p7>ไก่ทอด/...</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/08_FastFood.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:23px;">
+									<p7>ฟาสต์ฟู้ด</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/06_Alacarte.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:32px;">
+									<p7>ตามสั่ง</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/12_Alacarte.png" width="60" height="60" align="middle" style="position:relative;  left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:26px;">
+									<p7>จานเดียว</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/07_Coffee.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:36px;">
+									<p7>กาแฟ</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/14_BubbleTea.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:37px;">
+									<p7>ชานม</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/17_Drinks_Juice.png" width="60" height="60" align="middle" style="position:relative;left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:28px;">
+									<p7>น้ำผลไม้</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/24_Ramen.png" width="60" height="60" align="middle" style="position:relative;left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:34px;">
+									<p7>ราเมง</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/25_Tempura.png" width="60" height="60" align="middle" style="position:relative;left:27px; top:-98px; ">
+								<span class="nosplit" style="position:absolute; top:-40px; left:31px;">
+									<p7>เทมปุระ</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/22_Pizza.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:35px;">
+									<p7>พิซซ่า</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/21_Spaghetti.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:20px;">
+									<p7>สปาเก็ตตี้</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/15_Staek.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:36px;">
+									<p7>สเต็ก</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/18_Burgers.png" width="60" height="60" align="middle" style="position:relative;left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:21px;">
+									<p7>เบอร์เกอร์</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/31.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:24px;">
+									<p7>ของทอด</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/36.png" width="60" height="60" align="middle" style="position:relative;left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:27px;">
+									<p7>ทานเล่น</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/11_DimSum.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:36px;">
+									<p7>ติ่มซำ</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/01_Grill.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:30px;">
+									<p7>ปิ้งย่าง</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/09_MooKraTa.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:25px;">
+									<p7>หมูกระทะ</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/03_Sukiyaki.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:41px;">
+									<p7>ชาบู</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/30.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:30px;">
+									<p7>ข้าวต้ม</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/10_Seafood.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:40px;">
+									<p7>ทะเล</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/23_Breakfast.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:23px;">
+									<p7>อาหารเช้า</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/33.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:38px;">
+									<p7>เหนือ</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/34.png" width="60" height="60" align="middle" style="position:relative;left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:48px;">
+									<p7>ใต้</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/27_Vegetarian.png" width="60" height="60" align="middle" style="position:relative;left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:25px;">
+									<p7>มังสวิรัติ</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/28_Jfood.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:48px;">
+									<p7>เจ</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/16_Clean_Slad.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:19px;">
+									<p7>คลีน/สลัด</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/38.png" width="60" height="60" align="middle" style="position:relative;left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:32px;">
+									<p7>ฮาลาล</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/05_Buffet.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:29px;">
+									<p7>บุฟเฟ่ต์</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/26_Dessert.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:21px;">
+									<p7>ของหวาน</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/13_Bakery_Cake.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:30px;">
+									<p7>เบเกอรี</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/19_IceCream.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:28px;">
+									<p7>ไอศกรีม</p7>
+								</span>
+							</div>
+							<div>
+								<img class="wdn-stretch round" src="https://static.robinhood.in.th/static/content/images/foodcategory/29_Donuts.png" width="60" height="60" align="middle" style="position:relative; left:27px; top:-98px;">
+								<span class="nosplit" style="position:absolute; top:-40px; left:37px;">
+									<p7>โดนัท</p7>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div id="div12" style="position:relative; top:2270px">	
+						<img class="fit" src="images\purple.png" width="17" height="17" align="middle" style="position:relative; top:10px; left:15px;">
+						<div id="section12" style="position:absolute; top:10px; left:45px;"></div>
+						<div>
+							<img class="wdn-stretch rounded-corners-2" src="https://static.robinhood.in.th/static/content/images/nationcategory/Thai.png" width="219" height="85" align="middle" style="position:relative; left:15px; top:30px;">
+							<div style="position:absolute; left:182px; top:83px;">
+								<p6>ไทย</p6>
+							</div>
+						</div>
+						<div>
+							<img class="wdn-stretch rounded-corners-2" src="https://static.robinhood.in.th/static/content/images/nationcategory/Japan.png" width="219" height="85" align="middle" style="position:relative; left:247px; top:-55px;">
+							<div style="position:absolute; left:399px; top:84px;">
+								<p6>ญี่ปุ่น</p6>
+							</div>
+						</div>
+						<div>
+							<img class="wdn-stretch rounded-corners-2" src="https://static.robinhood.in.th/static/content/images/nationcategory/Vietnamese.png" width="219" height="85" align="middle" style="position:relative; left:15px; top:-43px;">
+							<div style="position:absolute; left:134px; top:180px;">
+								<p6>เวียดนาม</p6>
+							</div>
+						</div>
+						<div>
+							<img class="wdn-stretch rounded-corners-2" src="https://static.robinhood.in.th/static/content/images/nationcategory/Chinese.png" width="219" height="85" align="middle" style="position:relative; left:247px; top:-128px;">
+							<div style="position:absolute; left:420px; top:180px;">
+								<p6>จีน</p6>
+							</div>
+						</div>
+						<div>
+							<img class="wdn-stretch rounded-corners-2" src="https://static.robinhood.in.th/static/content/images/nationcategory/Italian.png" width="219" height="85" align="middle" style="position:relative; left:247px; top:-116px;">
+							<div style="position:absolute; left:364px; top:278px;">
+								<p6>อิตาเลียน</p6>
+							</div>
+						</div>
+						<div>
+							<img class="wdn-stretch rounded-corners-2" src="https://static.robinhood.in.th/static/content/images/nationcategory/Korean.png" width="219" height="85" align="middle" style="position:relative; left:15px; top:-201px;">
+							<div style="position:absolute; left:158px; top:278px;">
+								<p6>เกาหลี</p6>
+							</div>
+						</div>
+					</div>
+					<div id="div13">
+						<div class="container">
+							<div class="view-portz" style="position:absolute; top:3235px;">	
+							<button id="prevz">&lt </button>
+							<button id="nextz">&gt </button>						
+								<div class="images-containerz">	
+									<div class="cardz">
+										<a style="text-decoration:none" href="banner_page.html"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/RBHXLoveAIS_Banner.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+									<div class="cardz">
+										<a style="text-decoration:none" href="banner_page.html"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/RBH_Debit_APP_Banner.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>
+									<div class="cardz">
+										<a style="text-decoration:none" href="banner_page.html"><img class="wdn-stretch rounded-corners" src="https://static.robinhood.in.th/static/content/images/banner/RBHxAISPhase2AppBanner.jpg" width="392" height="108" align="middle" style="position:relative; left:34px;"></a>
+									</div>								
+								</div>
+								<div style="position:relative; left:210px; top:5px;">
+									<span class="dotz"></span>
+									<span class="dotz"></span>
+									<span class="dotz"></span>
+								</div>
+							</div>
+						</div>					
+						<script>
+							const nextz = document.getElementById('nextz');
+							const prevz = document.getElementById('prevz');
+							const imagesz = document.querySelector('.images-containerz');
+							const dotsz = document.querySelectorAll('.dotz');
+							
+							const first_card_clonez = imagesz.children[0].cloneNode(true);
+							const last_card_clonez = imagesz.children[imagesz.children.length-1].cloneNode(true);
+							
+							imagesz.insertBefore(last_card_clonez, imagesz.children[0]);
+							imagesz.appendChild(first_card_clonez);
+							
+							imagesz.style.transitionDuration = "0.0s";
+							imagesz.style.transform = `translate(-412px)`;
+							
+							let dotStorez = document.querySelectorAll('.dotz');
+							
+							let current_cardz = 1;
+							
+							let current_dotz = 1;
+							
+							let inAnimz = false;
+							
+							highlightDotz(dotStorez[0]);
+							
+							dotStorez.forEach(dotz => {
+								dotz.addEventListener("click", event => {
+									if(!inAnimz) {
+										let dotStorezArray = Array.prototype.slice.call(dotStorez);
+										let dotzIndex = dotStorezArray.indexOf(event.target);
+										
+										highlightDotz(event.target);
+									}
+								})
+							})
+							
+							function highlightDotz(dotSelectz, directionz) {
+								if(dotSelectz === undefined && directionz === "nextz"){
+									dotSelectz = dotStorez[0]
+								}else if(dotSelectz === undefined && directionz === "prevz"){
+									dotSelectz = dotStorez[imagesz - 1]
+								}
+									
+								dotStorez.forEach(dotz => {
+									if(dotz === dotSelectz) {
+										dotz.classList.add("dot-fillz");
+									}else{
+										dotz.classList.remove("dot-fillz");
+									}
+								})
+							}
+							
+							nextz.addEventListener('click', () => {
+								if (current_cardz < imagesz.children.length - 1) {
+									current_cardz++;
+								
+									imagesz.style.transitionDuration = "0.5s";
+									imagesz.style.transform = `translate(-${(current_cardz * 392) + (current_cardz * 20)}px)`;
+									
+									if (current_cardz === imagesz.children.length - 1) {
+										setTimeout(() => {
+										imagesz.style.transitionDuration = "0.0s";
+										imagesz.style.transform = `translate(-412px)`;
+										current_cardz = 1;
+										}, 600);
+									}
+								}else{
+									return;
+								}
+							});
+							
+							prevz.addEventListener('click', () => {
+								if (current_cardz > 0) {
+									current_cardz--;
+								
+									imagesz.style.transitionDuration = "0.5s";
+									imagesz.style.transform = `translate(-${(current_cardz * 392) + (current_cardz * 20)}px)`;
+									
+									if (current_cardz === 0) {
+										setTimeout(() => {
+										imagesz.style.transitionDuration = "0.0s";
+										imagesz.style.transform = `translate(-${(imagesz.children.length - 2) * 412}px)`;
+										current_cardz = imagesz.children.length - 2;
+										}, 600);
+									}
+								}else{
+									return;
+								}
+							});																	
+						</script>
+					</div>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
